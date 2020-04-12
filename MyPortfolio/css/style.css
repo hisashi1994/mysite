@@ -1,0 +1,413 @@
+@charset "utf-8";
+
+/* ユニバーサルセレクタで余白リセット */
+* {
+	margin: 0;
+	padding: 0;
+}
+/* 全体の設定 */
+li {
+    list-style: none;
+}
+
+body {
+    font-family: "游明朝", YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝", "ＭＳ 明朝", serif;
+    user-select: none;
+}
+
+body a{
+    text-decoration: none;
+    color:#353535;
+}
+
+.container {
+    width:1340px;
+    text-align: center;
+}
+
+/* ヘッダー */
+
+.header {
+    width: 100%;
+    height: 80px;
+    /* background-color: rgba(246, 133, 85, 0.418); */
+    background-color: #3535356e;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    transition: .2s;
+}
+
+.is-animation {
+    height: 30px;
+}
+
+.site-title {
+    width: 80%;
+}
+
+.site-title h1 {
+    /* font-family:"Haettenschweiler"; */
+    text-shadow: #4C4C4C 2px 2px;
+    font-size: 2.5em;
+    margin-left: 10%;
+    line-height: 80px;
+    text-align: left;
+    float: left;
+}
+
+.site-title a {
+    color: rgb(255, 255, 255);
+}
+
+.site-title a:hover {
+    opacity: 0.5;
+}
+
+
+#global-nav {
+    height: 50px;
+}
+
+.nav {
+    float: right;
+    display: flex;
+    margin-right: 100px;
+    border-left: 1px solid rgba(128, 128, 128, 0.801);
+    margin-top: 10px;
+}
+
+.nav li {
+    font-size: 1.8em;
+    border-right: 1px solid rgba(128, 128, 128, 0.486);
+    text-shadow: #353535 1px 1px 0;
+}
+
+.nav a {
+    padding: 6px 20px;
+    cursor: pointer;
+    display: block;
+    color: #F6B352;
+}
+
+.nav a:hover {
+    color: #fff;
+    /* background-color: rgba(246, 133, 85, 0.466); */
+}
+/* ここからスライドショー */
+.slider-wrap {
+    width: 1350px;
+    margin: 0 auto;
+    margin-top: 80px;
+    position: relative;
+}
+
+.slide-text {
+    width: 1350px;
+    text-align: center;
+    color: white;
+    position: absolute;
+    top:0;
+    z-index: 5;
+}
+
+.slider-wrap h2{
+    font-size: 6em;
+    margin-top: 150px;
+    -webkit-text-stroke: #4C4C4C 3px;
+}
+
+.slider-wrap p {
+    margin-top: 50px;
+    line-height: 0px;
+    font-size: 2em;
+    text-shadow: #4c4c4c 1px 1px;
+    color: white;
+}
+
+#slider {
+    width: 100%;
+}
+
+#slider img {
+    max-width: 100%;
+    z-index: -2147483647;
+}
+
+ 
+/* ここからメイン */
+/* プロフィール */
+#Profile {
+    height: 2000px;
+    background-color: white;
+    padding-top: 70px;
+}
+
+.content-title {
+    font-size: 3em;
+    color: #F68655;
+    text-shadow: #353535 2px 2px;
+    padding-top: 30px;
+    margin-bottom: 30px;
+}
+
+.contents > p {
+    font-size: 1.5em;
+    margin-bottom: 80px;
+}
+
+.my-face {
+    width: 300px;
+    border-radius: 50%;
+}
+
+.Profile-content {
+    display: flex;
+    justify-content: center;
+}
+
+.box {
+    width: 250px;
+    height: 250px;
+    margin: 30px;
+    background-color: rgb(230, 228, 228);
+    opacity : 0;
+    transform: translateY(80px);
+    transition: 1s;
+    -webkit-transition: all 1.5s;
+    -webkit-transform: translate(0, 0);
+    opacity: 1;
+}
+
+.box.move {
+    -webkit-transform: translate(-100px, 0);
+    opacity: 0;
+}  
+.box h3, .careea h3 {
+    width: 4em;
+    margin-top: 20px;
+    font-size: 1.8em;
+    color: #353535;
+    background: linear-gradient(transparent 80%, rgba(246, 178, 82, 0.815) 0%);
+}
+
+.box h3 {
+    margin-left: 25%;
+}
+
+.careea h3 {
+    margin-left: 43%;
+}
+
+.box p {
+    margin-top: 15%;
+}
+
+.freetime ul {
+    margin-top: 10%;
+}
+
+.freetime li {
+    list-style-position: inside;
+    list-style-type: initial;
+    text-align: left;
+    margin-left: 25%;
+    line-height: 35px;
+}
+
+/* キャリア */
+.careea {
+    width: 870px;
+    height: 1050px;
+    margin-top: 100px;
+    background-color: rgb(230, 228, 228);
+    /* border: #4C4C4C 1px solid; */
+    display: inline-block;
+    justify-content: center;
+    opacity : 0;
+    transform: translateY(80px);
+    transition: 1s;
+}
+
+.careea > p {
+    font-size: 1.2em;
+    margin-top: 20px;
+}
+
+.careea-item {
+    text-align: center;
+    width: 85%;
+    font-size: 1.2em;
+    margin-top: 50px;
+    margin-left: 7%;
+    padding-top: 5px;
+    padding-bottom: 1.5em;
+    float: left;
+    background-color: rgba(245, 245, 220, 0.384);
+    cursor:pointer;
+}
+
+.careea-item span {
+    color: #F68655;
+}
+
+.careea-content {
+    margin-top: 1em;
+    display: none;
+}
+
+.careea-content p{
+    float: left;
+    margin-left: 10%;
+}
+
+.careea1 {
+    margin-top: 6%;
+}
+
+/* スキル */
+#Skills{
+    height: 800px;
+    background-color: #F6B352;
+    padding-top: 70px;
+}
+
+.skills-contents {
+    display: flex;
+    justify-content: center;
+}
+
+.item {
+    width:25%;
+    height:350px;
+    background-color: white;
+    margin: 30px 20px;
+    padding-top:15px;
+    border: 1px solid #353535;
+    opacity : 0;
+    transform: translateY(80px);
+    transition: 1s;
+}
+
+.item h3 {
+    font-size: 55px;
+}
+
+.item img {
+    width: 120px;
+    margin-bottom: 20px;
+}
+
+.javascript img {
+    width: 95px;
+    margin-top: 15px;
+    margin-bottom: 30px;
+}
+
+.item p {
+    text-align: left;
+    margin-left: 10%;
+    margin-right: 10%;
+    font-size: 0.8em;
+}
+
+/* お問い合わせ */
+/* 全体 */
+#Contact {
+    height: 1000px;
+    background-color: white;
+    padding-top: 70px;
+}
+
+.form-content {
+    font-weight: bold;
+}
+/* フォーム */
+/* 全体の見た目 */
+
+dl {
+    width: 950px;
+    border: 1px solid #4C4C4C;
+    margin: 5px auto;
+}
+
+dl dt {
+    color: #944613;
+    float: left;
+    padding: 2em;
+}
+
+dl dd {
+    border-bottom: 1px solid #4C4C4C;
+    margin: 0;
+    padding: 2em 0 2em 15em;
+}
+
+.must {
+    color: rgb(245, 62, 62);
+    margin-left: 1em;
+}
+
+/* フォーム内容の見た目 */
+input[type="email"]{
+    width: 50%;
+}
+
+input[type="text"] {
+    font-size: 1em;
+    width: 50%;
+}
+
+label {
+    margin-right: 2em;
+}
+
+textarea {
+    width: 30em;
+    height: 6em;
+    font-size: 1em;
+}
+
+/* 送信ボタン */
+
+.submit {
+    width: 950px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+button[type="submit"] {
+    float: right;
+    margin-top: 20px;
+    padding: 15px 3em;
+    background-color: rgb(247, 101, 39);
+    color: #fff;
+    font-size: 1em;
+    font-weight: bold;
+    border-radius: 15px;
+    cursor: pointer;
+}
+button[type="submit"]:focus {
+    outline: 0;
+}
+
+button[type="submit"]:hover {
+    opacity: 0.8;
+}
+
+button[type="submit"]:active {
+    background-color: #F68655;
+}
+
+/* フッター */
+.footer {
+    height: 70px;
+    background-color: #353535;
+}
+
+.footer p {
+    font-size: 1em;
+    color: white;
+    line-height: 70px;
+}
